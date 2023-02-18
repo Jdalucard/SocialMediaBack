@@ -43,6 +43,7 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage });
+console.log(upload);
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
